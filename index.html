@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>~~» Pixel Art Maker «~~</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="html2canvas.js"></script>
+
+  <!-- FONTS -->
+
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P&effect=anaglyph|neon" rel="stylesheet">
+
+  <!-- ICONS -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+  <div id="header">
+    <h1><span id="broken">Lab</span>: Pi<span id="broken_three">x</span>el <span id="broken_two">Art</span> <span id="flick">Maker</span></h1>
+  </div>
+
+  <div class="menuLeft">
+
+    <h2 class="submenu">Choose<br>Grid Size</h2>
+
+    <form id="sizePicker" class="font-effect-anaglyph">
+      <input type="number" id="input_height" name="height" min="1" max="80" value="20"><label> Height</label><br><br>
+      <input type="number" id="input_width" name="width" min="1" max="80" value="20"><label style="padding-right: 15px"> Width</label><br><br>
+      <audio id="play_one" src="sounds/smb3_coin.wav"></audio>
+      <div id="submit_grid"><input type="submit" id="submit" value="Submit" onclick="document.getElementById('play_one').play()"></div>
+    </form>
+
+    <h2 class="submenu">Pick<br>A Color</h2>
+
+    <form id="colors" class="font-effect-anaglyph">
+      <input type="color" id="colorPickerLeft"><label> L Click</label><br><br>
+      <input type="color" id="colorPickerRight"><label> R Click</label>
+    </form>
+
+  </div>
+
+  <div class="menuRight">
+
+    <h2 class="submenu">Select<br>A Mode</h2>
+
+    <div id="fillMode" class="btn-group">
+      <audio id="play_two" src="sounds/smb3_power-up.wav"></audio>
+      <button name="Bucket Mode" id="bucketMode" class="mode-buttons" onclick="document.getElementById('play_two').play()">Fill</button>
+      <audio id="play_three" src="sounds/smb3_airship_moves.wav"></audio>
+      <button name="Delete Mode" id="deleteMode" class="mode-buttons" onclick="document.getElementById('play_three').play()">Delete</button>
+      <button id="clearMode" disabled class="mode-buttons">Eraser</button>
+      <audio id="play_four" src="sounds/smb3_vine.wav"></audio>
+      <button id="save" name="Save Canvas" class="mode-buttons" onclick="document.getElementById('play_four').play()">Save</button>
+
+    </div>
+    <a id="link"></a>
+
+  </div>
+
+  <h2 class="title">Design Canvas</h2>
+  <div class="canv" id="canva_image">
+    <table id="pixel_canvas"></table>
+  </div>
+  <script src="designs.js"></script>
+
+</body>
+
+</html>

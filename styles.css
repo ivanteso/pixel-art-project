@@ -1,0 +1,258 @@
+@font-face {
+    font-family: 'streamsterregular';
+    src: url('StreamsterFont/streamster-webfont.woff2') format('woff2'),
+         url('StreamsterFont/streamster-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-image: url(https://s10.postimg.org/nzk038zu1/static.gif);
+}
+
+#header {
+  height: 130px;
+  border: 4px solid #808080;
+  box-shadow: 0px 5px 0px 0px black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url(https://s10.postimg.org/bq0zcov3d/vapor2.gif);
+  background-position: left center;
+
+}
+
+.menuLeft {
+  text-align: center;
+  float: left;
+
+  background-image: url(https://s10.postimg.org/yawcvlu0p/sea_left.gif);
+  border: 4px solid #808080;
+  border-top: none;
+  box-shadow: 5px 5px 0px 0px black;
+  padding: 10px 5px;
+}
+
+.menuRight {
+  text-align: center;
+  float: right;
+
+  background-image: url(https://s10.postimg.org/myjre2dop/sea_right.gif);
+  border: 4px solid #808080;
+  border-top: none;
+  box-shadow: -5px 5px 0px 0px black;
+  padding: 10px 5px;
+}
+
+#penMode {
+  text-align: right;
+}
+
+#pixel_canvas {
+  display: table;
+  align-self: auto;
+  background-color: black;
+}
+
+#sizePicker,
+#colors,
+#fillMode {
+  padding: 15px;
+  border: 4px solid white;
+  margin: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.btn-group .mode-buttons {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #d9cdc1;
+  padding: 6px 60px;
+  text-align: center;
+  display: inline-block;
+  cursor: crosshair;
+  height: 50px;
+  width: 160px;
+  display: block;
+  border: 4px solid #808080;
+}
+
+.btn-group .mode-buttons:not(:last-child) {
+    border-bottom: none;
+}
+
+.btn-group .mode-buttons:hover {
+    background-color: #b9b0a7;
+}
+
+#bucketMode {
+  background-image: url(https://s10.postimg.org/kxt7t823t/hearth_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50px;
+}
+
+#deleteMode {
+  background-image: url(https://s10.postimg.org/rmv5vfsw9/space_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50px;
+}
+
+#clearMode {
+  background-image: url(https://s10.postimg.org/irubl59bd/cross_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50px;
+}
+
+#save {
+  background-image: url(https://s10.postimg.org/k8afgs995/cart_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50px;
+}
+
+h1 {
+  font-family: 'streamsterregular';
+  color: #ebffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0.2em;
+/*  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;*/
+}
+
+#broken {
+  animation: fade 3.5s infinite alternate;
+}
+
+#broken_two {
+  animation: fade 1.5s infinite alternate;
+}
+
+#broken_three {
+  animation: fade 2.1s infinite alternate;
+}
+
+#flick {
+  animation: fastFlick 0.01s infinite alternate;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-style: normal;
+  color: #ffffff;
+  text-shadow: -0.15em 0 red, 0.15em 0 cyan;
+  text-align: center;
+  }
+
+.title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+.submenu {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 10;
+  margin-right: 10px;
+  margin-left: 10px;
+  animation: blink 2.5s steps(4, start) infinite;
+}
+
+label,
+div {
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 200;
+  }
+
+input {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+#input_height,
+#input_width {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#submit {
+  background-color: #d9cdc1;
+  height: 40px;
+  font-size: 15px;
+  border: 4px solid #808080;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #b9b0a7;
+}
+
+table,
+tr,
+td {
+  border: 1px solid #3f3856;
+  background-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 15px;
+  box-shadow: 0px 0px 0px 4px #808080;
+}
+
+td {
+  width: 13px;
+  height: 13px;
+}
+
+input[type="number"] {
+  width: 4em;
+}
+
+input[type="color"] {
+  width: 34px;
+  height: 34px;
+  cursor: crosshair;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes fastFlick {
+  70% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fade {
+  40% {
+    opacity: 0.8;
+  }
+  42% {
+    opacity: 0.1;
+  }
+  43% {
+    opacity: 0.8;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  46% {
+    opacity: 0.8;
+  }
+}
