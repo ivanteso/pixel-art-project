@@ -5,16 +5,13 @@
   <title>~~» Pixel Art Maker «~~</title>
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cbbl.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="html2canvas.js"></script>
 
   <!-- FONTS -->
 
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P&effect=anaglyph|neon" rel="stylesheet">
-
-  <!-- ICONS -->
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&effect=anaglyph" rel="stylesheet">
 
 </head>
 
@@ -50,15 +47,21 @@
 
     <div id="fillMode" class="btn-group">
       <audio id="play_two" src="sounds/smb3_power-up.wav"></audio>
-      <button name="Bucket Mode" id="bucketMode" class="mode-buttons" onclick="document.getElementById('play_two').play()">Fill</button>
+
+      <button name="Bucket Mode" id="bucketMode" class="mode-buttons" onclick="document.getElementById('play_two').play()"><div class="tooltip">Fill<span class="tooltiptext cbbl" style="top: -110px; right:240%;">Fill the whole canvas with the L-click colour</span></div></button>
       <audio id="play_three" src="sounds/smb3_airship_moves.wav"></audio>
-      <button name="Delete Mode" id="deleteMode" class="mode-buttons" onclick="document.getElementById('play_three').play()">Delete</button>
-      <button id="clearMode" disabled class="mode-buttons">Eraser</button>
+      <button name="Delete Mode" id="deleteMode" class="mode-buttons" onclick="document.getElementById('play_three').play()"><div class="tooltip">Delete<span class="tooltiptext cbbl" style="top: -80px; right:240%;">Delete the whole canvas</span></div></button>
+      <button id="clearMode" disabled class="mode-buttons"><div class="tooltip">Eraser<span class="tooltiptext cbbl" style="top: -90px; right:240%;">Double click on a cell to delete it</span></div></button>
       <audio id="play_four" src="sounds/smb3_vine.wav"></audio>
-      <button id="save" name="Save Canvas" class="mode-buttons" onclick="document.getElementById('play_four').play()">Save</button>
+      <button id="save" name="Save Canvas" class="mode-buttons" onclick="document.getElementById('play_four').play()"><div class="tooltip">Save<span class="tooltiptext cbbl" style="top: -70px; right:240%;">Save your canvas as JPG</span></div></button>
 
     </div>
+
     <a id="link"></a>
+    <div class="tooltip" id="credits_box"><div id="credits"><strong>Credits</strong></div><span class="tooltiptext cbbl" style="top: -370px; right:100%;">"Lab: Pixel Art Maker" is developed by Ivan Teso as final project for the Udacity "Google Developer Challenge Scholarship: Front-End Web Dev" course. You can find this project also on my GitHub page <strong><a href="https://github.com/ivanteso/pixel-art-project" target="_blank">HERE</a></strong>. Feel free to write me your feedback at <strong>ivan.teso [at] gmail [dot] com </strong></span></div>
+    </div>
+
+
 
   </div>
 
