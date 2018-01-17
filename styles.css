@@ -1,3 +1,4 @@
+/* local font, used for h1 title */
 @font-face {
     font-family: 'streamsterregular';
     src: url('StreamsterFont/streamster-webfont.woff2') format('woff2'),
@@ -18,7 +19,6 @@ body {
   padding-bottom: 20px;
   background-image: url(BG/vapor2.gif);
   background-position: left center;
-
 }
 
 .menuLeft {
@@ -45,7 +45,6 @@ body {
 
 .tooltip {
     position: relative;
-    /*display: inline-block;*/
     color: black;
 }
 
@@ -111,34 +110,36 @@ body {
     background-color: #b9b0a7;
 }
 
+/* the followings are the 4 buttons on the right side, everyone has an associated icon */
 #bucketMode {
-  background-image: url(https://s10.postimg.org/kxt7t823t/hearth_icon.png);
+  background-image: url(Icons/hearth_icon.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 50px;
 }
 
 #deleteMode {
-  background-image: url(https://s10.postimg.org/rmv5vfsw9/space_icon.png);
+  background-image: url(Icons/space_icon.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 50px;
 }
 
 #clearMode {
-  background-image: url(https://s10.postimg.org/irubl59bd/cross_icon.png);
+  background-image: url(Icons/cross_icon.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 50px;
 }
 
 #save {
-  background-image: url(https://s10.postimg.org/k8afgs995/cart_icon.png);
+  background-image: url(Icons/cart_icon.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 50px;
 }
 
+/* header title, with the general animation */
 h1 {
   font-family: 'streamsterregular';
   color: #ebffff;
@@ -150,6 +151,7 @@ h1 {
   margin: 0.2em;
 }
 
+/* the following 4 selectors belong to 4 distinct element in the title, to make the "broken neon" and flickering effect */
 #broken {
   animation: fade 3.5s infinite alternate;
 }
@@ -252,6 +254,7 @@ input[type="color"] {
   cursor: crosshair;
 }
 
+/* all the animation keyframes */
 @keyframes blink {
   to {
     visibility: hidden;

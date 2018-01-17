@@ -1,13 +1,11 @@
 var pixelTable = $("#pixel_canvas");
 
-//funzione generica per cancellare una griglia eventualmente presente al caricamento pagina o quando si schiaccia il tasto "submit"
-
+// generic function made to eventually delete a previous grid already present on the page once the "submit" button is clicked
 function deleteGrid() {
   pixelTable.children().remove();
 }
 
-// funzione per creare la tabella
-
+// function for create the grid
 function makeGrid() {
   const tableHeight = $("#input_height");
   const tableWidth = $("#input_width");
@@ -25,8 +23,7 @@ function makeGrid() {
     }
   }
 
-  // una volta creata la tabella, si può usare la modalità "penna" con colori abbinati a L e R click sulla cella e "cancella" (doppio click) di default
-
+  // once the grid is made, it's possible to use a normal "pen mode" and select a left and right click color to paint the cells. It is also possible to delete a single cell double clicking on it
   $("td").click(function() {
     var colorOne = $("#colorPickerLeft").val();
     $(this).css("background-color", colorOne);
@@ -43,12 +40,11 @@ function makeGrid() {
   });
 }
 
-//carica una griglia 20x20 di default al caricamento della pagina, inizializzando anche le funzioni "fill", "delete" e "save"
-
+// draw a 20x20 grid by default once the page is loaded and initialize also the "fill", "delete" and "save" functions"
 $("document").ready(function() {
   makeGrid();
 
-  // il tasto "fill mode" colora tutto il canvas con il colore abbinato al L click
+  // "fill mode" button fill the entire canvas with the L click colour
 
   $("#bucketMode").click(function() {
     event.preventDefault();
@@ -56,15 +52,13 @@ $("document").ready(function() {
     $("td").css("background-color", colorOne);
   });
 
-  // il tasto "delete canvas" resetta il canvas (colora tutto di bianco)
-
+  // "delete canvas" mode erase the whole table
   $("#deleteMode").click(function() {
     event.preventDefault();
     $("td").css("background-color", "rgb(255, 255, 255)");
   });
 
-  //il tasto save esporta il contenuto della tabella in un file immagine png
-
+  // "save canvas" export the table and save it on the PC as image file (jpg)
   $("#save").click(function(event) {
     event.preventDefault();
     html2canvas($("#pixel_canvas"), {
@@ -77,8 +71,7 @@ $("document").ready(function() {
     });
   });
 
-  //cliccando sul tasto "submit" si cancella la griglia precedente e ne ricarica una vuota sempre di dimensioni 20x20
-
+  // clicking on "submit" delete the previous canvas and create a new 20x20 table
   $("#submit").click(function() {
     event.preventDefault();
     deleteGrid();

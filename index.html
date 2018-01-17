@@ -3,14 +3,18 @@
 
 <head>
   <title>~~» Pixel Art Maker «~~</title>
+
   <link rel="shortcut icon" type="image/x-icon" href="Icons/favicon.ico"/>
 
+  <!-- CSS stylesheet and "comic bubble" stylesheet (used for making tooltips) -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="cbbl.min.css">
+
+  <!-- jQuery and "html2canvas" (used for save canvas as jpg) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="html2canvas.js"></script>
 
-  <!-- FONTS -->
+  <!-- Google Font & Effect -->
 
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&effect=anaglyph" rel="stylesheet">
 
@@ -46,9 +50,9 @@
 
     <h2 class="submenu">Select<br>A Mode</h2>
 
+    <!-- the 4 right side buttons, everyone has an associated sound (except the delee button) and a tooltip associated -->
     <div id="fillMode" class="btn-group">
       <audio id="play_two" src="sounds/smb3_power-up.wav"></audio>
-
       <button name="Bucket Mode" id="bucketMode" class="mode-buttons" onclick="document.getElementById('play_two').play(); document.getElementById('play_two').volume = 0.05;"><div class="tooltip">Fill<span class="tooltiptext cbbl" style="top: -110px; right:240%;">Fill the whole canvas with the L-click colour</span></div></button>
       <audio id="play_three" src="sounds/smb3_airship_moves.wav"></audio>
       <button name="Delete Mode" id="deleteMode" class="mode-buttons" onclick="document.getElementById('play_three').play(); document.getElementById('play_three').volume = 0.05;"><div class="tooltip">Delete<span class="tooltiptext cbbl" style="top: -80px; right:240%;">Delete the whole canvas</span></div></button>
